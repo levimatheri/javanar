@@ -1,2 +1,2 @@
 # javanar
-A java library for manipulating audio
+A java library for manipulating audio e.g. cutting
