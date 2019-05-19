@@ -41,4 +41,8 @@ public class AudioSegment {
       return this;
     }
   }
+  
+  public static void main(String[] args) {
+	  System.out.println("Yay! it works!!");
+  }
 }
