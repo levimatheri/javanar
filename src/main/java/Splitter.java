@@ -31,6 +31,20 @@ public class Splitter {
         }
     }
 
+    /**
+     * Splits an audio wave file into chunks of size [chunkSize] in milli seconds.
+     * Adds the split wav files into /output directory
+     * @param chunkSize The number in milliseconds of each chunk.
+     */
+    private void split(int chunkSize) {
+        split(chunkSize, null);
+    }
+
+    /**
+     * Splits an audio wave file into chunks of size [chunkSize] in milli seconds.
+     * @param chunkSize The number in milliseconds of each chunk.
+     * @param directoryPath A specific directory path to put the split files in.
+     */
     private void split(int chunkSize, String directoryPath) {
         try {
             // get byte size per millisecond
@@ -44,7 +58,7 @@ public class Splitter {
                 directory = new File(directoryPath);
             }
             else {
-                directory = new File("./src/main/resources/test");
+                directory = new File("./src/main/resources/output");
             }
 
             if (!directory.exists())
